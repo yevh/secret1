@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allowlisted files"
+paths = [
+    '''gitleaks.toml''',
+    '''(.*?)(png|jpg|gif|doc|docx|pdf|bin|xls|xlsx|ppt|pptx)$''',
+]
