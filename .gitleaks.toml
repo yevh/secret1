@@ -1,9 +1,14 @@
 [extend]
 useDefault = true
 
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(['"]?[a-z0-9_-]*key['"]?\s*[:=]\s*['"][0-9a-zA-Z]{32,}['"])'''
+secretGroup = 1
+
 [allowlist]
-description = "Allowlisted files"
 paths = [
     '''gitleaks.toml''',
-    '''(.*?)(png|jpg|gif|doc|docx|pdf|bin|xls|xlsx|ppt|pptx)$''',
+    '''(.*?)(png|jpg|gif|doc|docx|pdf|bin|xls|xlsx|ppt|pptx)$'''
 ]
